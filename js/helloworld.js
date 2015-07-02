@@ -1,5 +1,5 @@
-var ShouterForm = require('./shouterForm');
-var React       = require('react');
+import ShouterForm from './shouterForm';
+import React from 'react';
 
 window.React = React;
 
