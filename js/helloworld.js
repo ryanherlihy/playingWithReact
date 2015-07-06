@@ -1,6 +1,6 @@
-var ShouterForm = require('./shouterForm');
-var React       = require('react');
+import GroceryList from './groceryList';
+import React from 'react';
 
 window.React = React;
 
-React.render(<ShouterForm />, document.getElementById('application'));
+React.render(<GroceryList />, document.getElementById('application'));
