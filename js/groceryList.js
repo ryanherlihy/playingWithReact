@@ -14,7 +14,7 @@ class GroceryList extends Component {
 			)
 		});
 		return (
-			<div className="groceries">
+			<div className="groceries" >
 				<h2>Grocery List</h2>
 				<ul>
 					{list}

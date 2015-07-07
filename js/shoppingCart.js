@@ -13,7 +13,7 @@ class ShoppingCart extends Component {
 		});
 		console.log(groceries);
 		return (
-			<div className="shopping-cart">
+			<div className="shopping-cart" >
 				<h2>Shopping Cart</h2>
 				<ul>{groceries}</ul>
 			</div>

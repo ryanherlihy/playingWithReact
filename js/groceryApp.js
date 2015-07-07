@@ -31,9 +31,17 @@ class GroceryApp extends Component {
 		});
 	}
 
+	addItem(e) {
+		if (e.keyCode === 13) {
+			this.setState({list: this.state.list.concat(e.target.value)});
+			e.target.value = "";
+		}
+	}
+
 	render () {
 		return (
 			<div className="grocery-app">
+				<input type="text" onKeyDown={this.addItem.bind(this)} placeholder="Add Item" />
 				<GroceryList list={this.state.list} select={this.selectGrocery.bind(this)} />
 				<ShoppingCart groceries={this.state.groceries} />
 			</div>
