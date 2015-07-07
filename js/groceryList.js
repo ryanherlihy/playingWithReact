@@ -7,23 +7,10 @@ const {
 
 class GroceryList extends Component {
 
-	constructor(props) {
-		super(props);
-
-		this.state = {
-			list: [
-				{item: 'Apples', selected: false},
-				{item: 'Carrots', selected: false},
-				{item: 'Bread', selected: false},
-				{item: 'Milk', selected: false},
-			]
-		}
-	}
-
 	render () {
-		var list = this.state.list.map((item, index) => {
+		var list = this.props.list.map((item, index) => {
 			return (
-				<li key={index} onClick={this.selectGrocery.bind(this)}>{item.item}</li>
+				<li key={index} onClick={this.props.select.bind(this)}>{item}</li>
 			)
 		});
 		return (
@@ -34,12 +21,6 @@ class GroceryList extends Component {
 				</ul>
 			</div>
 		);
-	}
-
-	selectGrocery(e) {
-		this.setState({list: this.state.list.filter((item) => {
-			return item.item !== e.target.innerText;
-		})});
 	}
 
 };

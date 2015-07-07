@@ -1,6 +1,6 @@
-import GroceryList from './groceryList';
+import GroceryApp from './groceryApp';
 import React from 'react';
 
 window.React = React;
 
-React.render(<GroceryList />, document.getElementById('application'));
+React.render(<GroceryApp />, document.getElementById('application'));
